@@ -1,0 +1,10 @@
+name: Paragraph Images
+type: module
+description: Provides Images Paragraph type
+core: 8.x
+package: Paragraphs
+
+dependencies:
+  - paragraphs
+  - image
+  - options

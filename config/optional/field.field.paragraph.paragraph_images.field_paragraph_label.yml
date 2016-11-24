@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.paragraph_images
+  enforced:
+    module:
+      - xparagraphs_images
+id: paragraph.paragraph_label.field_paragraph_label
+field_name: field_paragraph_label
+entity_type: paragraph
+bundle: paragraph_images
+label: Label
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

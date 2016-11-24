@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: plate
+label: Plate
+effects:
+  73ff4900-6853-4428-a3fc-9ca937f1c1ad:
+    uuid: 73ff4900-6853-4428-a3fc-9ca937f1c1ad
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400

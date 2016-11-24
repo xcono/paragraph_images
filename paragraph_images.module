@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Contains paragraph_images.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function paragraph_images_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the paragraph_images module.
+        case 'help.page.paragraph_images':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Paragraphs Images') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme_registry_alter
+ */
+function paragraph_images_theme_registry_alter(&$theme_registry)
+{
+
+    // register template for paragraph_images entity in module
+    $theme_registry['paragraph__paragraph_images'] = [
+            'path' => drupal_get_path('module', 'paragraph_images') . '/templates/paragraph',
+            'template' => 'paragraph--paragraph-images'
+        ] + $theme_registry['paragraph'];
+}
+
+/**
+ * Implements hook_preprocess_paragraph() for paragraph.html.twig.
+ * @param array $vars
+ */
+function paragraph_images_preprocess_paragraph(array &$vars)
+{
+
+    $paragraph = $vars['paragraph'];
+    $type = $paragraph->getType();
+
+    // Set images style
+
+    $vars['style'] = 'default';
+
+    if ('paragraph_images' === $type) {
+
+        $style = $paragraph->get('field_' . $type . '_style')->first();
+
+        if ($style) {
+            $vars['style'] = $style->getValue()['value'];
+        }
+    }
+}

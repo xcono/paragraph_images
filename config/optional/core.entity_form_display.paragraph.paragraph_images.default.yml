@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_images.field_paragraph_images
+    - field.field.paragraph.paragraph_images.field_paragraph_images_style
+    - field.field.paragraph.paragraph_images.field_paragraph_label
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.paragraph_images
+  module:
+    - image
+id: paragraph.paragraph_images.default
+targetEntityType: paragraph
+bundle: paragraph_images
+mode: default
+content:
+  field_paragraph_images:
+    type: image_image
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_paragraph_images_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_paragraph_label:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

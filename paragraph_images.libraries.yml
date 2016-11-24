@@ -1,0 +1,11 @@
+plates:
+  version: 1.1.0
+  css:
+      theme:
+        assets/node_modules/magnific-popup/dist/magnific-popup.css: {}
+        assets/src/plates/plates.css: {}
+  js:
+      assets/node_modules/magnific-popup/dist/jquery.magnific-popup.min.js: {}
+      assets/src/plates/plates.js: {}
+  dependencies:
+    - core/jquery
