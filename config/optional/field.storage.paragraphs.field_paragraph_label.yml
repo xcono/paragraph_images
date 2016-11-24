@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraphs.field_paragraph_label
+id: paragraphs_images.field_paragraph_label
 field_name: field_paragraph_label
 entity_type: paragraph
 type: string
