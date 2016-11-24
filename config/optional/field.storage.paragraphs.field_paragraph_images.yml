@@ -25,4 +25,4 @@ locked: false
 cardinality: -1
 translatable: true
 indexes: {  }
-persist_with_no_fields: false
+persist_with_no_fields: true
