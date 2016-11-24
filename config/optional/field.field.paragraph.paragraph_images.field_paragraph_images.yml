@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.paragraph.field_paragraph_images
     - paragraphs.paragraphs_type.paragraph_images
   enforced:
     module:
